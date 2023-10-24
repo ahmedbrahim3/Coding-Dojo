@@ -1,0 +1,63 @@
+#blueBox{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+}
+#blueBox1{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+#blueBox2{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    margin-top: 14px;
+}
+#blueBox3{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    margin-top: 14px;
+    margin-left: 14px;
+}
+.blue{
+    display: inline-block;
+}
+.container {
+    display: flex;
+}
+#box4{
+    background-color: blue;
+    width: 270px;
+    height: 20px;
+    margin-left: 94px;
+    margin-top: -94px;
+}
+#box5{
+    background-color: blue;
+    width: 270px;
+    height: 20px;
+    margin-left: 93px;
+    margin-top: 14px;
+}
+#box6{
+    background-color: blue;
+    width: 270px;
+    height: 20px;
+    margin-left: 93px;
+    margin-top: 20px;
+}
+#box7{
+    background-color: blue;
+    width: 361px;
+    height: 20px;
+    margin-top: 14px;
+}
+#box8{
+    background-color: blue;
+    width: 361px;
+    height: 20px;
+    margin-top: 13px;
+}

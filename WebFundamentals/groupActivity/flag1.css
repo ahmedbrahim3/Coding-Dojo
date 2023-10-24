@@ -1,0 +1,20 @@
+#black{
+    background-color: black;
+    width: 100px;
+        height: 300px;
+}
+#yellow{
+    background-color:yellow;
+    width: 100px;
+        height: 300px;
+        margin-left: -10px;
+}
+#red{
+    background-color:rgb(255, 0, 0);
+    width: 100px;
+        height: 300px;
+        margin-left: -10px;
+}
+.div {
+    display: inline-block;
+  }
