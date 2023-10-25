@@ -1,0 +1,21 @@
+.x {
+    background-color: rgb(249, 151, 167);
+    color: rgb(155, 249, 249);
+    border:1px solid;
+    border-radius: 30px;
+ 
+ 
+ }
+ .y {
+    background-color: rgb(129, 240, 200);
+    color: rgb(231, 242, 242);
+    border:1px solid;
+    border-radius: 50px;
+ 
+ 
+ }
+ .z {
+    background-color: rgb(96, 75, 233);
+    color: rgb(148, 205, 255);
+    box-shadow: 3px 3px rgb(49, 138, 239), -1em 0 .4em rgb(119, 238, 240);
+ }
