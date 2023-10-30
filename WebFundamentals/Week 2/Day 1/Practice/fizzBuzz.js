@@ -13,3 +13,11 @@ function fizzBuz() {
         
     }
 }
+
+for (var i = 1; i <5; i++) {
+    x=0
+    6
+    10
+    
+}
+console.log(i);

@@ -1,0 +1,49 @@
+.box1{
+    width: 400px;
+    height: 200px;
+    /* background-color: aliceblue; */
+    border: 2px black solid;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.h{
+    font-family: cursive;
+}
+.h3{
+    font-family: cursive;
+
+}
+.cl{
+    display: flex;
+}
+.hh{
+    font-family: cursive;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.but1{
+    background-color: yellow;
+    box-shadow: 3px 3px black;
+    /* width: 50px; */
+}
+.container1{
+    display: flex;
+}
+.box3{
+    width: 200px;
+    height: 170px;
+    /* background-color: aliceblue; */
+    border: 2px black solid;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.hi{
+    font-family: cursive;
+}
+.but3{
+    background-color: rgb(57, 181, 57);
+    box-shadow: 3px 3px black;
+}
+button{
+    margin-left: 20px;
+}
