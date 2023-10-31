@@ -1,0 +1,95 @@
+*{
+    /* margin: 0px auto; */
+
+}
+.nav{
+    width: 700px;
+    height: 70px;
+    background-color: black;
+    margin: 0px auto;
+
+}
+.h{
+    font-family: cursive;
+    /* margin-top: 10px; */
+    color: aliceblue;
+}
+.h1{
+    font-family: cursive;
+    margin-left: 600px;
+    margin-top: 30px;
+}
+.container{
+    display: flex;
+    margin-left: 500px;
+
+}
+.avatar{
+    width: 130px;
+    height: 230px;
+    border: 3px black solid;
+}
+.box1{
+    width: 300px;
+    height: 130px;
+    border: 3px black solid;
+  
+
+}
+.box2{
+    width: 300px;
+    height: 130px;
+    border: 3px black solid;
+    margin-top: 20px;
+
+}
+.box3{
+    width: 300px;
+    height: 130px;
+    border: 3px black solid;
+    margin-top: 20px;
+}
+.container2{
+    margin-left: 20px;
+}
+.img{
+    width: 80px;
+    height: 80px;
+    margin: 25px;
+}
+.p{
+    font-family: cursive;
+    text-decoration-line: underline;
+    color: rgb(0, 145, 255);
+    margin-left: 20px;
+}
+.container3{
+    display: flex;
+    justify-content: space-between;
+}
+.hh{
+    font-family: cursive;
+}
+.pp{
+    font-family: cursive;
+    margin-top: 24px;
+}
+.ppp{
+    font-family: cursive;
+    margin-top: 24px;
+}
+.pppp{
+    font-family: cursive;
+    margin-top: 24px;
+}
+.button1{
+    width: 60px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: yellow;
+    box-shadow: 5px 5px black;
+}
+.par{
+    font-family: cursive;
+    margin-top: -9px;
+}
