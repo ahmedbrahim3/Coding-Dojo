@@ -13,8 +13,8 @@ var img1=document.querySelector("#im1")
 var user=document.querySelector("#n")
 var check=document.querySelector("#c")
 var img=document.querySelector("#im")
-var  req=document.querySelector(".r")
-var  con=document.querySelector(".y")
+var req=document.querySelector(".r")
+var con=document.querySelector(".y")
 
 
 console.log(img1);
