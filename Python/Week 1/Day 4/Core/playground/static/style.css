@@ -1,0 +1,17 @@
+.boox{
+    width: 200px;
+    height: 200px;
+    border: 2px black solid;
+    background-color: antiquewhite  ;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    margin-top: 90px;
+}
+.wel{
+    margin:0 auto;
+    margin-left: 650px ;
+    
+}
