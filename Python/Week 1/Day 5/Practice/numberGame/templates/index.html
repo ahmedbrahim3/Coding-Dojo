@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <title>Document</title>
-    <style>
-        .h{
-            margin-left: 600px;
-        }
-    </style>
 </head>
 <body>
-    <div class="o">
-        <h1 class="h">counter</h1>
-        <h1>Counter Value: {{ counter_value }}</h1>
-        <form action="/increment" method="get">
-            <button class="btn btn-outline-success">Success</button>
+    <div class="container mt-5">
+        <h2>Guessing game </h2>
+        <form action="/game" method="POST">
+            <div class="form-group">
+                <label for="inputText">Input Text:</label>
+                <input type="text" class="form-control" id="inputText" placeholder="Enter your guess" name="num" >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <form action="/reset" method="get">
-            <button class="btn btn-outline-danger">reset</button>
-        </form>
+        <h1>{{result}}</h1>
         
     </div>
 </body>
