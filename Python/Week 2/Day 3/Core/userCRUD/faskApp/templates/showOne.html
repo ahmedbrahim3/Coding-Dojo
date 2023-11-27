@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="con">
+        <h3>first_name :<span> {{one_user.first_name}}</span></h3>
+        <h3>last_name :<span>{{one_user.last_name}}</span></h3>
+        <h3>email :<span>{{one_user.email}}</span></h3>
+        <a href="/up/{{one_user.id}}"><p>update</p></a>
+        <form action="/del/{{one_user.id}}" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+        
+    </div>
+</body>
+</html>
