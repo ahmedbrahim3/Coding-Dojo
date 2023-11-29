@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff; /* Set the background color to white */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .dark-bg {
+            background-color: #343a40; /* Set the background color of the form and card to dark grey */
+            color: #ffffff; /* Set text color to white */
+            border-color: #343a40; /* Set border color to dark grey */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            
+            <!-- Bootstrap Form -->
+            <form class="dark-bg" action="/create" method="post">
+                <h2 class="text-center mb-4 ">New Dojo</h2>
+                <div class="form-group">
+                    <label for="dojoTitle">Dojo Title</label>
+                    <input type="text" class="form-control" id="dojoTitle" placeholder="Enter Dojo Title" name="name">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <a href="/add_ninja"> Add ninja</a>
+        </div>
+
+        <!-- Bootstrap Card -->
+        <div class="col-md-6">
+            <div class="card dark-bg">
+                <div class="card-body">
+                    <h5 class="card-title">All Dojo </h5>
+                    {% for one_dojo in dojos %}
+                    <p class="card-text"><a href="/show/{{one_dojo.id}}">{{one_dojo.name}}</a></p>
+                    {%endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
