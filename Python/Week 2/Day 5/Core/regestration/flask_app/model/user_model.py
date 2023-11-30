@@ -5,7 +5,6 @@ import re
 
 EMAIL_REGEX = re.compile(r"^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$")
 
-
 class User:
     def __init__(self, data):
         self.id = data["id"]
@@ -15,23 +14,21 @@ class User:
         self.password = data["password"]
         self.created_at = data["created_at"]
         self.updated_at = data["updated_at"]
-
-    # ? ==== CREATE A USER ====
+    
     @classmethod
     def create(cls, data):
         query = """
-                  INSERT INTO users (first_name, last_name, email, password)
+                  INSERT INTO user (first_name, last_name, email, password)
                   VALUES (%(first_name)s,%(last_name)s,%(email)s,%(password)s);
                 """
 
         return connectToMySQL(DATABASE).query_db(query, data)
 
-    # ? === GET USER BY ID
     @classmethod
     def get_user_by_id(cls, data):
         query = """
-                     SELECT * FROM users
-                    WHERE users.id = %(id)s;
+                     SELECT * FROM user
+                    WHERE user.id = %(id)s;
                 """
         result = connectToMySQL(DATABASE).query_db(query, data)
         if len(result) < 1:
@@ -43,8 +40,8 @@ class User:
     @classmethod
     def get_by_email(cls, data):
         query = """
-                    SELECT * FROM users
-                    WHERE users.email = %(email)s;
+                    SELECT * FROM user
+                    WHERE user.email = %(email)s;
                 """
 
         result = connectToMySQL(DATABASE).query_db(query, data)
@@ -52,8 +49,7 @@ class User:
             return False
 
         return cls(result[0])
-
-    # * ========= USER VALIDATOR =========
+    
     @staticmethod
     def validate(data):
         is_valid = True

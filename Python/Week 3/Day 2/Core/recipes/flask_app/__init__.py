@@ -1,8 +1,5 @@
 # __init__.py
 from flask import Flask
-
-# DATABASE="users"
-
-
 app = Flask(__name__)
-app.secret_key = "shhhhhh"
+app.secret_key = "laghmani"
+DATABASE="recipes_schema"
