@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sasquachs websighting</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mt-5">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" id="loginTab" data-toggle="tab" href="#loginForm">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="registerTab" data-toggle="tab" href="#registerForm">Register</a>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-3">
+                <!-- Login Form -->
+                <div class="tab-pane fade show active" id="loginForm">
+                    <form action="/users/login" method="post">
+                        {% with messages = get_flashed_messages(category_filter=["log"]) %}     <!-- declare a variable called messages -->
+			    {% if messages %}                            <!-- check if there are any messages -->
+			    {% for message in messages %}            <!-- loop through the messages -->
+			    
+			<p style="color: red">{{message}}</p>
+			                   <!-- display each message in a paragraph tag -->
+			        {% endfor %} {% endif %} {% endwith %}
+                        <!-- Login form fields go here -->
+                        <div class="form-group">
+                            <label for="loginUsername">Email</label>
+                            <input type="text" class="form-control" id="loginEmail" placeholder="Enter useremail    " name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="tab-pane fade" id="registerForm">
+                    {% with messages = get_flashed_messages(category_filter=["reg"]) %}     <!-- declare a variable called messages -->
+		{% if messages %}<!-- check if there are any messages -->
+		{% for message in messages %}
+        <p style="color: red">{{message}}</p>
+		<!-- display each message in a paragraph tag -->
+		{% endfor %} {% endif %} {% endwith %}
+                    <form action="/users/register" method="post">
+                        <!-- Registration form fields go here -->
+                        <div class="form-group">
+                            <label for="registerUsername">Username</label>
+                            <input type="text" class="form-control" id="registerUsername" placeholder="Enter username" name="first_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerUsername">Lastname</label>
+                            <input type="text" class="form-control" id="registerLastname" placeholder="Enter lastname" name="last_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">email</label>
+                            <input type="email" class="form-control" id="registeremail" placeholder="Enter email"name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" class="form-control" id="registerPassword1" placeholder="Enter password"name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="registerPassword2" placeholder="Confirm password" name="confirm_password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

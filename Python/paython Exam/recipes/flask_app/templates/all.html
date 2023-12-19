@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff; /* Set the background color to white */
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">User Information</h2>
+    <!-- Bootstrap Table -->
+    <table class="table table-bordered table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Under</th>
+                <th scope="col">PostedBy</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one in all %}
+            <tr>
+                <td>{{one.name}}</td>
+                {% if one.under==1 %}
+                <td>yes</td>
+                {% else %}
+                <td>no</td>
+
+                {% endif %}
+                <td>{{one.first_name}}</td>
+                <td class="d-flex gap-2"><a class="btn btn-outline-success" href="/recipes/{{one.id}}">View recipe</a>
+                    {%if session.user_id==one.user_id%}
+                    <a class="btn btn-outline-warning" href="/recipes/{{one.id}}/edit">Edit</a><a class="btn btn-outline-danger"  href="/recipes/{{one.id}}/destroy">Cancel</a>
+                    {%endif%}
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts -->
+
+</body>
+</html>

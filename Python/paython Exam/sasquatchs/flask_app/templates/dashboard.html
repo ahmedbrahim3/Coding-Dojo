@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sasquachs websighting</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff; /* Set the background color to white */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card-body {
+    display: flex;
+}
+        .fle{
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="fle">
+    <h2 style="margin-left: 20px;">
+        Sasquatchs websighting
+    </h2>
+    <div style="margin-right: 50px;">
+        <h2 style="margin-right: 10px;">{{session['first_name']}}</h2>
+        <div style="margin-left: 15px;">
+            <a class="btn btn-outline-warning" href="new/saghting">Report a sighting</a><br>
+            <a class="btn btn-outline-danger" style="margin-top: 10px; margin-left: 70px;" href="logout">Logout</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Reported Sightings</h2>
+    <div class="card  " style="width: 900px;">
+        
+        {% for sas in all_sas %}
+        <div class="d-flex ">
+        <div style="margin-left: 20px;">
+            <h5>{{sas.location}} - {{sas.date}}</h5>
+            <h5>ReportedBy - {{sas.first_name}}</h5>    
+        </div>
+        <div style="margin-left: 300px; margin-top: 20px;">
+            {%if session.user_id==sas.user_id%}
+            <a class="btn btn-outline-warning" href="/{{sas.id}}/edit">Edit</a>                         <a class="btn btn-outline-danger"  href="/{{sas.id}}/destroy">Cancel</a>
+            {% else %}
+            <a class="btn btn-outline-success" href="/show/{{sas.id}}">View recipe</a>
+            {%endif%}
+        </div></div>
+        <hr style="width: 800px; margin-left: 50px;">
+            {% endfor%}
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts -->
+
+</body>
+</html>
