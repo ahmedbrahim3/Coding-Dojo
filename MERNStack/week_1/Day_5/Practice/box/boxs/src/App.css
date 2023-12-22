@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+.d{
+  display: flex;
+  gap: 10px;
+  margin-top: 100PX;
+  margin-left: 500px;
+  flex-wrap: wrap;
+}
