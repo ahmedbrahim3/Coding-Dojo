@@ -1,6 +1,7 @@
 const JokeController= require("../controllers/joke.controller")
 
 
+
 module.exports=(app)=>{
 app.get("/api/jokes",JokeController.getAll)
 app.get("/api/one/:id",JokeController.getOne)
