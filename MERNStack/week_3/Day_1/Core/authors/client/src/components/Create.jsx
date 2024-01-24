@@ -69,7 +69,7 @@ const nav = useNavigate()
             margin="normal"
             name="title"
             onChange={(e)=>setName(e.target.value)}
-            error={!!errors.name} // Check if there is an error for the 'name' field
+              ={!!errors.name} // Check if there is an error for the 'name' field
             helperText={errors.name && errors.name.message} // Display error message
           />
         </CardContent>
