@@ -1,13 +1,13 @@
-	package com.daikachi;
+package com.anis.hopper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DaikashiPathApplication {
+public class HoppersReceiptApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DaikashiPathApplication.class, args);
+		SpringApplication.run(HoppersReceiptApplication.class, args);
 	}
 
 }
